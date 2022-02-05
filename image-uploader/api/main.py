@@ -1,0 +1,27 @@
+import cloudinary
+import cloudinary.uploader
+from fastapi import FastAPI, UploadFile, File
+
+cloudinary.config( 
+  cloud_name = "drq0ppqcl", 
+  api_key = "987225648978334", 
+  api_secret = "YmzPITck1lP7uBG41WbwuTIEsIE" 
+)
+
+app = FastAPI()
+
+@app.post("/uploader")
+async def uploader(file: UploadFile = File(...)):
+    type = file.content_type.upper()
+    if(len(type) > 0 and (type.find("JPEG") > -1 or type.find("PNG") > -1)):
+        result = cloudinary.uploader.upload(file.file, public_id = "demo/uploader")
+        url = result.get("url")
+        return {
+            "error": False,
+            "url": url,
+            "message": "success"
+        }
+    else:
+        return {
+            "error": True,
+            "message": "Only upload JPEG / PNG formats."}
