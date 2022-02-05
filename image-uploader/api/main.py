@@ -1,3 +1,4 @@
+import uvicorn
 import cloudinary
 import cloudinary.uploader
 from fastapi import FastAPI, UploadFile, File
@@ -25,3 +26,8 @@ async def uploader(file: UploadFile = File(...)):
         return {
             "error": True,
             "message": "Only upload JPEG / PNG formats."}
+        
+        
+        
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True)
