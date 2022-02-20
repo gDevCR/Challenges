@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Alert, ProgressBar } from 'react-bootstrap';
 import './uploader.scss';
 import ImageUploader from '../assets/imgs/image.svg';
+import { isProduction } from '../Utils';
 
 interface props {
   resultStatus: (result: boolean) => void;
@@ -28,7 +29,8 @@ function Uploader(result: props) {
   };
 
   const uploadFile = (target: any) => {
-    const baseURL = '/upload';
+    const baseURL =
+      (isProduction() ? 'https://jkj5mw.deta.dev' : '') + '/upload';
     const formData = new FormData();
     formData.append('file', target.files[0]);
 
