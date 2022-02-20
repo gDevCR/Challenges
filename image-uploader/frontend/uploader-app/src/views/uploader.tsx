@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Alert, ProgressBar } from 'react-bootstrap';
 import './uploader.scss';
 import ImageUploader from '../assets/imgs/image.svg';
-import { isProduction } from '../Utils';
+import { isProduction } from '../utilitaries';
 
 interface props {
   resultStatus: (result: boolean) => void;
