@@ -11,7 +11,7 @@ cloudinary.config(
 
 app = FastAPI()
 
-@app.post("/uploader")
+@app.post("/upload")
 async def uploader(file: UploadFile = File(...)):
     type = file.content_type.upper()
     if(len(type) > 0 and (type.find("JPEG") > -1 or type.find("PNG") > -1)):
