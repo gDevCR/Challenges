@@ -31,13 +31,16 @@ function Uploader(result: props) {
   const uploadFile = (target: any) => {
     const baseURL =
       (isProduction() ? 'https://jkj5mw.deta.dev' : '') + '/upload';
+
     const formData = new FormData();
     formData.append('file', target.files[0]);
 
     setShowLoader(true);
     setFileSize(target.files[0].size);
     axios
-      .post(baseURL, formData)
+      .post(baseURL, formData, {
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      })
       .then((res) => {
         const data = res.data;
         if (data) {
