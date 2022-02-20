@@ -1,3 +1,3 @@
 export const isProduction = (): boolean => {
-  return window.location.host.toLowerCase().indexOf('locahost') === -1;
+  return window.location.host.toLowerCase().indexOf('localhost') === -1;
 };
