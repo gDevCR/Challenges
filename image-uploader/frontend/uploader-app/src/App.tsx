@@ -20,12 +20,13 @@ function App() {
           created by{' '}
           <a
             href="https://github.com/gDevCR/Challenges/tree/main/image-uploader"
+            rel="noreferrer"
             target="_blank"
           >
             gDevCR
           </a>
           -
-          <a href="https://devchallenges.io" target="_blank">
+          <a href="https://devchallenges.io" rel="noreferrer" target="_blank">
             devChallenges.io
           </a>
         </label>
