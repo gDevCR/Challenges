@@ -2,6 +2,7 @@ import uvicorn
 import cloudinary
 import cloudinary.uploader
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 
 cloudinary.config( 
   cloud_name = "drq0ppqcl", 
@@ -10,6 +11,13 @@ cloudinary.config(
 )
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/upload")
 async def uploader(file: UploadFile = File(...)):

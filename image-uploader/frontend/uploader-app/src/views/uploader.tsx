@@ -30,7 +30,8 @@ function Uploader(result: props) {
 
   const uploadFile = (target: any) => {
     const baseURL =
-      (isProduction() ? 'https://jkj5mw.deta.dev' : '') + '/upload';
+      (isProduction() ? 'https://jkj5mw.deta.dev' : 'http://localhost:8080') +
+      '/upload';
 
     const formData = new FormData();
     formData.append('file', target.files[0]);
