@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: column wrap;
 }
 
 .button {
@@ -20,4 +21,24 @@
   margin: 2px 1px;
   cursor: pointer;
   border-radius: 10px;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0rem;
+
+  label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #a9a9a9;
+
+    a {
+      text-decoration: none;
+    }
+    a:link {
+      color: #a9a9a9;
+    }
+  }
 }
