@@ -89,6 +89,7 @@
   display: inline-block;
   letter-spacing: -0.035em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .main-footer {
