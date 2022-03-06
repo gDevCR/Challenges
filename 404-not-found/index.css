@@ -116,13 +116,7 @@
   color: #bdbdbd;
 }
 
-@media only screen and (min-device-width: 1280px) {
-  #uploader {
-    margin-top: 12rem;
-  }
-}
-
-@media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 1024px), (max-width: 1024px) {
   .main {
     margin: 0 1rem;
   }
@@ -150,7 +144,7 @@
   }
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 768px), (max-width: 768px) {
   .main-body {
     flex-direction: column;
     padding-top: 9%;
@@ -176,14 +170,14 @@
   }
 }
 
-@media only screen and (max-device-width: 412px) {
+@media only screen and (max-device-width: 412px), (max-width: 412px) {
   .main-footer {
     position: relative;
     margin-top: 27%;
   }
 }
 
-@media only screen and (max-device-width: 375px) {
+@media only screen and (max-device-width: 375px), (max-width: 375px) {
   .image-descript img {
     height: 10rem;
   }
