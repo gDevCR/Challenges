@@ -175,6 +175,13 @@
   }
 }
 
+@media only screen and (max-device-width: 412px) {
+  .main-footer {
+    position: relative;
+    margin-top: 27%;
+  }
+}
+
 @media only screen and (max-device-width: 375px) {
   .image-descript img {
     height: 10rem;
@@ -185,5 +192,9 @@
   .text-descript button {
     font-size: 10px;
     padding: 15px 25px;
+  }
+  .main-footer {
+    position: relative;
+    margin-top: 27%;
   }
 }
